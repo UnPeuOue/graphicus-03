@@ -1,0 +1,183 @@
+TESTS APPLICATION (CAS 01)
+Étape 1 terminée avec succès
+Étape 2 terminée avec succès
+Étape 3 terminée avec succès
+----- Couche 0
+Rectangle(x=0, y=0, l=1, h=1, aire=1)
+Carre(x=-19, y=2, c=10, aire=100)
+----- Couche 1
+Cercle(x=0, y=0, r=4, aire=50.2655)
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+Étape 4 terminée sans valeur de retour
+Aire du canevas: 151.265
+Étape 5 terminée, valeur ci-haut
+
+
+TESTS APPLICATION (CAS 02)
+Étape 1 terminée avec succès
+----- Couche 0
+Cercle(x=0, y=0, r=1, aire=3.14159)
+Carre(x=3, y=6, c=3, aire=9)
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+Étape 2 terminée sans valeur de retour
+Aire du canevas: 12.1416
+Étape 3 terminée, valeur ci-haut
+Étape 4 terminée avec succès
+----- Couche 0
+Cercle(x=10, y=5, r=1, aire=3.14159)
+Carre(x=13, y=11, c=3, aire=9)
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+Étape 5 terminée sans valeur de retour
+Aire du canevas: 12.1416
+Étape 6 terminée, valeur ci-haut
+
+
+Tests unitaires Formes
+Rectangle(x=0, y=0, l=5, h=8, aire=40)
+Cercle(x=2, y=7, r=3, aire=28.2743)
+Carre(x=-5, y=1, c=1, aire=1)
+Carre(x=0, y=0, c=2, aire=4)
+Rectangle(x=-1, y=-1, l=6, h=2, aire=12)
+
+
+Tests unitaires Vecteurs
+Taille du vecteur: 0
+Capacité du vecteur: 1
+Contenu du vecteur: 
+
+Ajout de 6 formes au vecteur
+Taille du vecteur: 6
+Capacité du vecteur: 8
+Contenu du vecteur: 
+Rectangle(x=0, y=0, l=5, h=8, aire=40)
+Cercle(x=0, y=0, r=1, aire=3.14159)
+Carre(x=0, y=0, c=1, aire=1)
+Carre(x=0, y=0, c=1, aire=1)
+Carre(x=0, y=0, c=1, aire=1)
+Carre(x=0, y=0, c=1, aire=1)
+
+Retrait des trois dernières formes
+Taille du vecteur: 3
+Capacité du vecteur: 8
+Contenu du vecteur: 
+Rectangle(x=0, y=0, l=5, h=8, aire=40)
+Cercle(x=0, y=0, r=1, aire=3.14159)
+Carre(x=0, y=0, c=1, aire=1)
+
+Retrait de la première forme
+Taille du vecteur: 2
+Capacité du vecteur: 8
+Contenu du vecteur: 
+Cercle(x=0, y=0, r=1, aire=3.14159)
+Carre(x=0, y=0, c=1, aire=1)
+
+Translation des formes du vecteur de (-5, 10)
+Contenu du vecteur: 
+Cercle(x=-5, y=10, r=1, aire=3.14159)
+Carre(x=-5, y=10, c=1, aire=1)
+
+Réinitialisation du vecteur
+Taille du vecteur: 0
+Capacité du vecteur: 1
+
+
+Tests unitaires Couche
+État de la couche au départ
+Couche initialisee
+
+Ajout d'un item à l'état initialisée
+Couche initialisee
+L'aire de la couche est: 0
+
+Ajout d'un item à l'état active
+Rectangle(x=0, y=0, l=1, h=1, aire=1)
+Carre(x=0, y=0, c=1, aire=1)
+L'aire de la couche est: 2
+
+Retrait d'un item à l'état active
+Carre(x=0, y=0, c=1, aire=1)
+L'aire de la couche est: 1
+
+Translation à l'état active
+Carre(x=2, y=6, c=1, aire=1)
+L'aire de la couche est: 1
+
+Réinitialisation de la couche
+Couche initialisee
+L'aire de la couche est: 0
+
+
+Tests unitaires Canevas
+État du canevas au départ
+----- Couche 0
+Couche active
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+L'aire du canevas est: 0
+
+Activer la couche 2
+----- Couche 0
+Couche inactive
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche active
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+L'aire du canevas est: 0
+
+Ajouter un rectangle, un carre et un cercle unitaires
+----- Couche 0
+Couche inactive
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Rectangle(x=0, y=0, l=1, h=1, aire=1)
+Cercle(x=0, y=0, r=1, aire=3.14159)
+Carre(x=0, y=0, c=1, aire=1)
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+L'aire du canevas est: 5.14159
+
+Réinitialiser le canevas
+----- Couche 0
+Couche active
+----- Couche 1
+Couche initialisee
+----- Couche 2
+Couche initialisee
+----- Couche 3
+Couche initialisee
+----- Couche 4
+Couche initialisee
+L'aire du canevas est: 0
+
