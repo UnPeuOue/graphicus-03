@@ -1,0 +1,6 @@
+﻿  monInterface.cpp
+C:\Users\arous\Bureau\Repo pour l'app\graphicus-03\Documents APP3\testGraphicusGUI\Code\cercle.h(10,20): warning C4305: 'initializing': truncation from 'double' to 'const float'
+monInterface.cpp(50,52): warning C4100: 'rayon': unreferenced formal parameter
+monInterface.cpp(50,45): warning C4100: 'y': unreferenced formal parameter
+monInterface.cpp(50,38): warning C4100: 'x': unreferenced formal parameter
+  testGraphicusGUI.vcxproj -> C:\Users\arous\Bureau\Repo pour l'app\graphicus-03\Documents APP3\testGraphicusGUI\debug\testGraphicusGUI.exe
