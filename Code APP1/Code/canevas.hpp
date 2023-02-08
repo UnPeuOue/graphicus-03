@@ -1,12 +1,43 @@
-/********
- * Fichier: canevas.cpp
- * Auteurs: C.-A. Brunet
- * Date: 08 janvier 2018 (creation)
- * Description: Implementation des methodes des classes decrites dans
- *    canevas.h. Ce fichier fait partie de la distribution de Graphicus.
-********/
+#ifndef DESSIN_H
+#define DESSIN_H
 
-#include "canevas.h"
+#define INITIALISEE 0
+#define ACTIVE 1
+#define INACTIVE 2
+
+#include <iostream>
+#include "couche.h"
+
+const int MAX_COUCHES = 5;
+
+using namespace std;
+
+class Canevas
+{
+public:
+   Canevas();
+   ~Canevas();
+   
+   bool reinitialiser();
+   
+   bool activerCouche(int index);
+
+   
+   bool ajouterForme(Forme *p_forme);
+   bool retirerForme(int index);
+   
+   double aire();
+   bool translater(int deltaX, int deltaY);
+   void afficher(ostream & s);
+   
+   bool ResetCouche(int index);
+
+private:
+     Couche couches[MAX_COUCHES];
+     short coucheActive;
+};
+
+// Méthodes
 
 Canevas::Canevas()
 {
@@ -94,3 +125,5 @@ bool Canevas::ResetCouche(int index)
 	return couches[index].Reset();
 }
 
+
+#endif
