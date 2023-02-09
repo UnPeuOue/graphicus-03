@@ -20,7 +20,7 @@ public:
     int GetRayon();
     double aire() override;
     
-    void afficher(ostream & s);
+    ostream& afficher(ostream& s);
     
 };
 
@@ -48,7 +48,7 @@ int Cercle::GetRayon()
 double Cercle::aire()
 { return PI*rayon*rayon; }
 
-void Cercle::afficher(ostream & s)
+ostream& Cercle::afficher(ostream & s)
 {
 	s << "Cercle(x=" << ancrage.x << ", y=" << ancrage.y <<
 	", r=" << rayon << ", aire=" << aire() << ")" << endl;

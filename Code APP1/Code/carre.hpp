@@ -21,7 +21,7 @@ public:
     double aire() override;
     
     // Sortie à l'écran
-    void afficher(ostream & s);    
+    ostream& afficher(ostream & s);
 };
 
 
@@ -50,9 +50,9 @@ int Carre::GetCote()
 double Carre::aire()
 { return cote*cote; }
 
-void Carre::afficher(ostream & s)
+ostream& Carre::afficher(ostream& s)
 {
-	s << "Carre(x=" << ancrage.x << ", y=" << ancrage.y <<
+	return s << "Carre(x=" << ancrage.x << ", y=" << ancrage.y <<
 	", c=" << cote << ", aire=" << aire() << ")" << endl;
 }
 

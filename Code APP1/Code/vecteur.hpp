@@ -1,21 +1,45 @@
 #ifndef VECTEUR_H
 #define VECTEUR_H
 
-#include "forme.h"
-#include "cercle.h"
-#include "rectangle.h"
-#include "carre.h"
+#include "forme.hpp"
+#include "cercle.hpp"
+#include "rectangle.hpp"
+#include "carre.hpp"
 
+// Forme* par exemple
+template <typename T>
 class Vecteur
 {
 private:
-    Forme** items;
+    T* items;
     int capacity;
     int size;
 public:
     Vecteur();
 	
     ~Vecteur();
+
+	// Surcharge d'opérateurs
+	const T& operator[] (int index) const
+	{
+		if (index < size)
+			return items[index];
+		else
+			return nullptr;
+	}
+
+	bool operator+= (T it)
+	{
+		return AddItem(it);
+	}
+
+	ostream& operator<<(ostream& os, const Vecteur& v)
+	{
+
+	}
+
+
+
  
     // Getters
     int GetSize();
@@ -27,9 +51,9 @@ public:
     //Setters
     void Vider(); // DÉTRUIT ÉGALEMENT LES FORMES DU VECTEURS
     
-    bool AddItem(Forme* item);
+    bool AddItem(T item);
     
-    Forme* RemoveItem(int index);
+    T RemoveItem(int index);
 	
 	void afficher(ostream & s);
 	
@@ -41,7 +65,7 @@ public:
 Vecteur::Vecteur()
 {
 	capacity=1;
-	items = new Forme*[capacity];
+	items = new T[capacity];
 	size = 0;
 }
 
@@ -95,7 +119,7 @@ void Vecteur::Vider()
 	capacity = 1;
 }
     
-bool Vecteur::AddItem(Forme* it)
+bool Vecteur::AddItem(T it)
 {
 	if (it == nullptr) return false;
 	size++;
@@ -103,7 +127,7 @@ bool Vecteur::AddItem(Forme* it)
 	if (size > capacity)
 	{
     	capacity *= 2;
-    	Forme** cpyItems = new Forme*[capacity];
+    	T* cpyItems = new T[capacity];
 		
         for(int i = 0; i < size-1; ++i)
         {
@@ -120,7 +144,7 @@ bool Vecteur::AddItem(Forme* it)
     return true;
 }
     
-Forme* Vecteur::RemoveItem(int index)
+T Vecteur::RemoveItem(int index)
 {
 	if (index < 0 || index >= size) return nullptr;
 	Forme* itemRemoved = nullptr;
